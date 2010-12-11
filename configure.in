@@ -1,0 +1,45 @@
+######## Process this file with autoconf to produce a configure script.
+AC_INIT(README)
+
+######## Detect the canonical host and target build environment
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+
+######## Setup for automake
+NAME="black-box"
+SDL_VERSION=1.1.5
+AM_INIT_AUTOMAKE($NAME, 1.4.8)
+
+######## Check for tools
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+
+######## Check for compiler environment
+AC_C_CONST
+
+######## Check for SDL
+AM_PATH_SDL($SDL_VERSION,
+            :,
+	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
+)
+
+######## Check for other libs
+AC_CHECK_LIB(SDL_mixer, main, , AC_MSG_ERROR(Your system is missing SDL_mixer! see http://www.libsdl.org/projects/SDL_mixer/), $SDL_LIBS)
+AC_CHECK_LIB(SDL_image, main, , AC_MSG_ERROR(Your system is missing libSDL_image!), $SDL_LIBS)
+		
+######## Set compiler flags and libraries
+CFLAGS="$CFLAGS $SDL_CFLAGS -DDATADIR=\\\"$datadir/black-box\\\""
+LIBS="$LIBS $SDL_LIBS -lSDL_mixer -lSDL_image -lSDL"
+
+######## Check for headers
+
+######## Finally create all the generated files
+AC_OUTPUT([
+Makefile
+src/Makefile
+data/Makefile
+data/gfx/Makefile
+data/sound/Makefile
+])
+
