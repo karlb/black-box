@@ -1,0 +1,68 @@
+
+Version 1.4.8
+    -Updated autotools files
+    -Updated acinclude.m4 (for SDL)
+    -Applied patch by Javier Serrano Polo:
+        * Remove compilation warnings
+        * Fix buffer overflows
+        * Erase previous level text
+        * Fix level command option
+        * Reuse path calculation function
+        * Avoid repeated crystal generation
+        * Fix window title
+
+Version 1.4.7
+    -removed SDL_mixer and SDL_image code and 
+	added them as external dependencies
+    -updated SFont
+
+Version 1.4.6
+    -new configure.guess
+
+Version 1.4.5
+    -new aclocal file (fixes problems on arm)
+
+Version 1.4.4
+    -aclocal and automake didn't work together!
+
+Version 1.4.3
+    -really works with newer automake version
+
+Version 1.4.2
+    -works with newer automake version
+    -increased music quality to 44khz
+
+Version 1.4.1
+    -added SDL>=1.1.5 check in configure-in
+    -fixed the level# reader
+    -new won pic
+    -new URL
+
+Version 1.4
+    -version number is not hard-coded anymore
+    -updated to SDL>=1.1.5
+    -levelnum is shown even in fullscreen mode
+    -added short parameters
+    -added parameter help
+
+Version 1.31
+    -fixed a bug in make install
+
+Version 1.3
+    -renamed to black-box
+    -blackbox can be started with a specified level number
+
+Version 1.2
+    -configure uses sdl-config correctly
+    -uses SFont -> can now be compiled on big-endian machines
+
+Version 1.1
+    -some bug fixes and small changes.
+    -added startup output
+    -added mail and web address to the help menu
+    -removed some compiler warnings
+    -added music
+    -added support for automake,autoconf and make install
+    -better directory structure
+    -changed OK button to GIVE UP button and detect winning automatically
+    -changing the difficulty generates a new fiel automatically

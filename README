@@ -1,0 +1,26 @@
+--------------------------------< Black-Box >-----------------------------------
+
+I'd like to receive a lot of comments and suggestions. You can get the newest 
+version of Black-Box at:
+    http://www.linux-games.com
+and write a mail to:
+    karlb@gmx.net
+
+Controls:
+    Mouse
+
+To run this you need the SDL-library, if you don't have it get it from:
+    http://www.devolution.com/~slouken/SDL/
+
+--------------------------------< PARAMETER >-----------------------------------
+
+"--nosound"                starts without sound
+"--nofullscreen"           guess
+"--levelnum [number]"      Starts with that level. The level number is shown
+                          in the title bar.
+
+--------------------------------------------------------------------------------
+
+Graphics, code and design by Karl Bartel:
+E-mail: karlb@gmx.net
+Homepage: www.karlb.home.pages.de
